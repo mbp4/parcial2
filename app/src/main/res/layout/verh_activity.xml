@@ -17,7 +17,7 @@
             android:layout_width="417dp"
             android:layout_height="wrap_content"
             android:padding="16dp"
-            android:text="Mi horario - Añadir asignatura"
+            android:text="Mi horario - Ver horario"
             android:textColor="@color/white"
             android:textSize="24sp" />
 
@@ -30,25 +30,19 @@
         android:padding="30dp"
         >
 
-        <EditText
-            android:id="@+id/editAsignatura"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="Añadir Clase" />
-
         <Spinner
             android:id="@+id/spinner"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Ver Horario"
+            android:text="Dia"
             android:layout_marginTop="16dp" />
 
-        <Spinner
-            android:id="@+id/editAhora"
+        <ListView
+            android:id="@+id/listViewHorario"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="¿Qué toca ahora?"
-            android:layout_marginTop="16dp" />
+            android:layout_height="match_parent"
+            android:padding="16dp"/>
+
     </LinearLayout>
 
     <LinearLayout
@@ -59,16 +53,10 @@
         android:padding="30dp">
 
         <Button
-            android:id="@+id/btnGuardar"
+            android:id="@+id/btnVolver"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Añadir" />
-
-        <Button
-            android:id="@+id/btnCancel"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Cancelar" />
+            android:text="Volver" />
 
     </LinearLayout>
 

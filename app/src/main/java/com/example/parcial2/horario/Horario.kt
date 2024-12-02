@@ -1,5 +1,6 @@
 package com.example.parcial2.horario
 
+import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
 import androidx.appcompat.app.AppCompatActivity
@@ -19,15 +20,18 @@ class Horario: AppCompatActivity() {
         btnAhora = findViewById(R.id.btnAhora)
 
         btnAñadir.setOnClickListener {
-
+            val intent = Intent(this, AñadirActivity::class.java)
+            startActivity(intent)
         }
 
         btnVer.setOnClickListener {
-
+            val intent = Intent(this, VerActivity::class.java)
+            startActivity(intent)
         }
 
         btnAhora.setOnClickListener {
-
+            val intent = Intent(this, AhoraActivity::class.java)
+            startActivity(intent)
         }
     }
 }
