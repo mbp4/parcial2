@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background= "@color/teal_200"
+        >
+
+        <TextView
+            android:id="@+id/textTitulo"
+            android:layout_width="417dp"
+            android:layout_height="wrap_content"
+            android:padding="16dp"
+            android:text="Mi horario - Añadir asignatura"
+            android:textColor="@color/white"
+            android:textSize="24sp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="30dp"
+        >
+
+        <EditText
+            android:id="@+id/editAsignatura"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Añadir Clase" />
+
+        <Spinner
+            android:id="@+id/spinner"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Ver Horario"
+            android:layout_marginTop="16dp" />
+
+        <EditText
+            android:id="@+id/editAhora"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="¿Qué toca ahora?"
+            android:layout_marginTop="16dp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:padding="30dp">
+
+        <Button
+            android:id="@+id/btnGuardar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Añadir" />
+
+        <Button
+            android:id="@+id/btnCancel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Cancelar" />
+
+    </LinearLayout>
+
+
+</LinearLayout>

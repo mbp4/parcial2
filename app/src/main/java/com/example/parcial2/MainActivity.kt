@@ -1,47 +1,41 @@
 package com.example.parcial2
 
+import android.content.Intent
 import android.os.Bundle
+import android.widget.Button
 import androidx.activity.ComponentActivity
-import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
-import androidx.compose.foundation.layout.fillMaxSize
-import androidx.compose.foundation.layout.padding
-import androidx.compose.material3.Scaffold
-import androidx.compose.material3.Text
-import androidx.compose.runtime.Composable
-import androidx.compose.ui.Modifier
-import androidx.compose.ui.tooling.preview.Preview
-import com.example.parcial2.ui.theme.Parcial2Theme
+import com.example.parcial2.evento.Evento
+import com.example.parcial2.farmacia.Farmacia
+import com.example.parcial2.horario.Horario
 
 class MainActivity : ComponentActivity() {
+    private lateinit var btnHorario: Button
+    private lateinit var btnListado: Button
+    private lateinit var btnFarmacias: Button
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
-        setContent {
-            Parcial2Theme {
-                Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
-                    Greeting(
-                        name = "Android",
-                        modifier = Modifier.padding(innerPadding)
-                    )
-                }
-            }
+        setContentView(R.layout.main_activity)
+
+        btnHorario = findViewById(R.id.button1)
+        btnListado = findViewById(R.id.button2)
+        btnFarmacias = findViewById(R.id.button3)
+
+        btnHorario.setOnClickListener {
+            val intent = Intent(this, Horario::class.java)
+            startActivity(intent)
         }
-    }
-}
 
-@Composable
-fun Greeting(name: String, modifier: Modifier = Modifier) {
-    Text(
-        text = "Hello $name!",
-        modifier = modifier
-    )
-}
+        btnListado.setOnClickListener {
+            val intent = Intent(this, Evento::class.java)
+            startActivity(intent)
+        }
 
-@Preview(showBackground = true)
-@Composable
-fun GreetingPreview() {
-    Parcial2Theme {
-        Greeting("Android")
+        btnFarmacias.setOnClickListener {
+            val intent = Intent(this, Farmacia::class.java)
+            startActivity(intent)
+        }
     }
 }
