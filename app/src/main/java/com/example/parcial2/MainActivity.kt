@@ -5,7 +5,7 @@ import android.os.Bundle
 import android.widget.Button
 import androidx.activity.ComponentActivity
 import androidx.activity.enableEdgeToEdge
-import com.example.parcial2.evento.Evento
+import com.example.parcial2.evento.InicioEvento
 import com.example.parcial2.farmacia.Farmacia
 import com.example.parcial2.horario.Horario
 
@@ -29,7 +29,7 @@ class MainActivity : ComponentActivity() {
         }
 
         btnListado.setOnClickListener {
-            val intent = Intent(this, Evento::class.java)
+            val intent = Intent(this, InicioEvento::class.java)
             startActivity(intent)
         }
 
