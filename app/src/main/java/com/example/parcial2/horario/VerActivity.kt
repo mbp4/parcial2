@@ -62,7 +62,7 @@ class VerActivity: AppCompatActivity() {
                 if (!querySnapshot.isEmpty) {
                     querySnapshot.documents.forEach { document ->
                         val asignatura = document.getString("nombre")
-                        val hora = document.getString("hora")
+                        val hora = document.getString("horaInicio")
                         asignaturas.add("$asignatura - $hora")
                     }
                     listAdapter.notifyDataSetChanged()
