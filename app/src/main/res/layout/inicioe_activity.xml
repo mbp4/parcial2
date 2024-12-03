@@ -9,7 +9,7 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@color/teal_200"
+        android:background="@color/blue_pastel"
         android:orientation="horizontal">
 
         <TextView
@@ -22,28 +22,18 @@
             android:textSize="24sp" />
 
         <ImageButton
-            android:id="@+id/imageButton"
+            android:id="@+id/btnAñadir"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:background="@color/teal_200"
+            android:background="@color/blue_pastel"
             app:srcCompat="@android:drawable/ic_menu_add" />
 
     </LinearLayout>
 
-    <LinearLayout
-        android:orientation="vertical"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:padding="16dp"
-        android:gravity="center"
-        >
-
-        <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/recyclerView"
+        <ListView
+            android:id="@+id/listView"
             android:layout_width="match_parent"
             android:layout_height="match_parent" />
-
-    </LinearLayout>
 
 </LinearLayout>

@@ -11,7 +11,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:background= "@color/teal_200"
+        android:background= "@color/blue_pastel"
         >
 
         <TextView
@@ -30,6 +30,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:padding="30dp"
+
         >
 
         <LinearLayout
@@ -41,13 +42,14 @@
                 android:id="@+id/editNombre"
                 android:layout_width="252dp"
                 android:layout_height="wrap_content"
+                android:textColor="@color/black"
                 android:hint="Nombre" />
 
             <ImageView
                 android:id="@+id/imageView"
                 android:layout_width="106dp"
                 android:layout_height="69dp"
-                tools:srcCompat="@tools:sample/avatars" />
+                android:src="@drawable/user" />
 
             </LinearLayout>
 
@@ -56,12 +58,14 @@
             android:layout_width="349dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
+            android:textColor="@color/black"
             android:hint="Descripcion" />
 
         <EditText
             android:id="@+id/editDireccion"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:textColor="@color/black"
             android:hint="Direccion"
             android:layout_marginTop="16dp" />
 
@@ -69,6 +73,7 @@
             android:id="@+id/editPrecio"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:textColor="@color/black"
             android:hint="Precio"
             android:layout_marginTop="16dp" />
 
@@ -77,6 +82,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="Fecha"
+            android:textColor="@color/black"
             android:layout_marginTop="16dp"
             android:focusable="false"
             android:clickable="true"
@@ -84,6 +90,7 @@
 
         <EditText
             android:id="@+id/editAforo"
+            android:textColor="@color/black"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="Aforo"
@@ -103,12 +110,14 @@
             android:id="@+id/btnGuardar2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:background="@color/green_pastel"
             android:text="Guardar" />
 
         <Button
             android:id="@+id/btnCerrar"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:background="@color/coral_pastel"
             android:text="Cerrar" />
 
     </LinearLayout>

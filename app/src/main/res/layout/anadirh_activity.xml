@@ -9,7 +9,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:background= "@color/teal_200"
+        android:background= "@color/blue_pastel"
         >
 
         <TextView
@@ -75,12 +75,14 @@
             android:id="@+id/btnGuardar"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:background="@color/green_pastel"
             android:text="Añadir" />
 
         <Button
             android:id="@+id/btnCancel"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:background="@color/coral_pastel"
             android:text="Cancelar" />
 
     </LinearLayout>

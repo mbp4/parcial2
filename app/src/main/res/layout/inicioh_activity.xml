@@ -9,7 +9,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:background= "@color/teal_200"
+        android:background= "@color/blue_pastel"
         >
 
         <TextView
@@ -35,6 +35,7 @@
         android:id="@+id/btnAdd"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:background="@color/green_pastel"
         android:text="Añadir Clase" />
 
     <Button
@@ -42,12 +43,14 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Ver Horario"
+        android:background="@color/lavender_pastel"
         android:layout_marginTop="16dp" />
 
     <Button
         android:id="@+id/btnAhora"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:background="@color/pink_pastel"
         android:text="¿Qué toca ahora?"
         android:layout_marginTop="16dp" />
     </LinearLayout>

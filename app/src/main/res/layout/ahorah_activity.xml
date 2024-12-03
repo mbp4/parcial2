@@ -3,13 +3,14 @@
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/white"
     >
 
     <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:background= "@color/teal_200"
+
         >
 
         <TextView
@@ -18,7 +19,7 @@
             android:layout_height="wrap_content"
             android:padding="16dp"
             android:text="Mi horario - ¿Qué toca ahora?"
-            android:textColor="@color/white"
+            android:background="@color/blue_pastel"
             android:textSize="24sp" />
 
     </LinearLayout>
@@ -35,6 +36,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Fecha"
+            android:textColor="@color/black"
             android:textSize="18sp"
             android:layout_marginTop="16dp" />
 
@@ -58,6 +60,7 @@
 
         <Button
             android:id="@+id/btnVolver2"
+            android:background="@color/green_pastel"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Volver" />
