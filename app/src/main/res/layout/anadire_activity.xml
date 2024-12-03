@@ -19,7 +19,7 @@
             android:layout_width="417dp"
             android:layout_height="wrap_content"
             android:padding="16dp"
-            android:text="Registro de Eventos"
+            android:text="@string/titulo2"
             android:textColor="@color/white"
             android:textSize="24sp" />
 
@@ -43,7 +43,7 @@
                 android:layout_width="252dp"
                 android:layout_height="wrap_content"
                 android:textColor="@color/black"
-                android:hint="Nombre" />
+                android:hint="@string/hint_nombre" />
 
             <ImageView
                 android:id="@+id/imageView"
@@ -59,14 +59,14 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
             android:textColor="@color/black"
-            android:hint="Descripcion" />
+            android:hint="@string/hint_descripcion" />
 
         <EditText
             android:id="@+id/editDireccion"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:textColor="@color/black"
-            android:hint="Direccion"
+            android:hint="@string/hint_direccion"
             android:layout_marginTop="16dp" />
 
         <EditText
@@ -74,14 +74,14 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:textColor="@color/black"
-            android:hint="Precio"
+            android:hint="@string/hint_precio"
             android:layout_marginTop="16dp" />
 
         <EditText
             android:id="@+id/editFecha"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Fecha"
+            android:hint="@string/hint_fecha"
             android:textColor="@color/black"
             android:layout_marginTop="16dp"
             android:focusable="false"
@@ -93,7 +93,7 @@
             android:textColor="@color/black"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Aforo"
+            android:hint="@string/hint_aforo"
             android:layout_marginTop="16dp" />
 
 
@@ -111,14 +111,14 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:background="@color/green_pastel"
-            android:text="Guardar" />
+            android:text="@string/btn_guardar" />
 
         <Button
             android:id="@+id/btnCerrar"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:background="@color/coral_pastel"
-            android:text="Cerrar" />
+            android:text="@string/btn_cerrar" />
 
     </LinearLayout>
 

@@ -2,11 +2,14 @@ package com.example.parcial2.evento
 
 import android.content.ContentValues.TAG
 import android.content.Intent
+import android.content.res.Configuration
 import android.os.Bundle
 import android.util.Log
+import android.widget.Button
 import android.widget.ImageButton
 import android.widget.ListView
 import android.widget.Toast
+import android.widget.ToggleButton
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
@@ -14,29 +17,56 @@ import com.example.parcial2.R
 import com.google.firebase.Firebase
 import com.google.firebase.firestore.FirebaseFirestore
 import com.google.firebase.firestore.firestore
+import java.util.Locale
 
 class InicioEvento: AppCompatActivity() {
     private lateinit var listView: ListView
     private lateinit var eventoadapter: EventoAdapter
     private var listado: MutableList<Evento> = mutableListOf()
     private lateinit var btnAñadir: ImageButton
+    private lateinit var btnIdioma: ToggleButton
     private val db: FirebaseFirestore = Firebase.firestore
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.inicioe_activity)
 
+        val preferences = getSharedPreferences("ajustes", MODE_PRIVATE)
+        val language = preferences.getString("idioma", "es") ?: "es"
+        cambiarIdioma(language)
+
         listView = findViewById(R.id.listView)
         btnAñadir = findViewById(R.id.btnAñadir)
         eventoadapter = EventoAdapter(this, listado)
         listView.adapter = eventoadapter
+        btnIdioma = findViewById(R.id.btnIdioma)
 
         btnAñadir.setOnClickListener {
             val intent = Intent(this, AñadirEvento::class.java)
             startActivity(intent)
         }
 
+        btnIdioma.setOnClickListener {
+            if (btnIdioma.isChecked) cambiarIdioma("es") else cambiarIdioma("en")
+        }
+
         mostrarEventos()
+    }
+
+    private fun cambiarIdioma(idioma: String) {
+        val currentLanguage = resources.configuration.locales[0].language
+        if (currentLanguage != idioma) {
+            val locale = Locale(idioma)
+            Locale.setDefault(locale)
+            val config = Configuration(resources.configuration)
+            config.setLocale(locale)
+            resources.updateConfiguration(config, resources.displayMetrics)
+
+            val preferences = getSharedPreferences("ajustes", MODE_PRIVATE)
+            preferences.edit().putString("idioma", idioma).apply()
+
+            recreate()
+        }
     }
 
     override fun onResume() {

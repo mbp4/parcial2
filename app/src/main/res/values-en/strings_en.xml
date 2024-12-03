@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">parcial2</string>
+    <string name="titulo">Event</string>
+    <string name="titulo2">Register Event</string>
+    <string name="toggle_text_off">Spanish</string>
+    <string name="toggle_text_on">English</string>
+    <string name="hint_nombre">Name</string>
+    <string name="hint_descripcion">Description</string>
+    <string name="hint_direccion">Direction</string>
+    <string name="hint_precio">Price</string>
+    <string name="hint_fecha">Date</string>
+    <string name="hint_aforo">Capacity</string>
+    <string name="btn_guardar">Save</string>
+    <string name="btn_cerrar">Exit</string>
+</resources>
+

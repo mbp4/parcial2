@@ -14,12 +14,22 @@
 
         <TextView
             android:id="@+id/textTitulo"
-            android:layout_width="331dp"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:padding="16dp"
-            android:text="Eventos"
+            android:text="@string/titulo"
             android:textColor="@color/white"
             android:textSize="24sp" />
+
+        <ToggleButton
+            android:id="@+id/btnIdioma"
+            android:layout_width="127dp"
+            android:layout_height="32dp"
+            android:layout_weight="1"
+            android:background="@color/green_pastel"
+            android:text="@string/toggle_text_off"
+            android:textOff="@string/toggle_text_off"
+            android:textOn="@string/toggle_text_on" />
 
         <ImageButton
             android:id="@+id/btnAñadir"
