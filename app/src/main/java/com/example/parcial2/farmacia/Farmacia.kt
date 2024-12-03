@@ -1,6 +1,3 @@
 package com.example.parcial2.farmacia
 
-import androidx.appcompat.app.AppCompatActivity
-
-class Farmacia: AppCompatActivity() {
-}
+data class Farmacia(val nombre: String, val telefono: String, val latitud: Double, val longitud: Double, val direccion: String)

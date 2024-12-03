@@ -6,7 +6,7 @@ import android.widget.Button
 import androidx.activity.ComponentActivity
 import androidx.activity.enableEdgeToEdge
 import com.example.parcial2.evento.InicioEvento
-import com.example.parcial2.farmacia.Farmacia
+import com.example.parcial2.farmacia.Iniciof
 import com.example.parcial2.horario.Horario
 
 class MainActivity : ComponentActivity() {
@@ -34,7 +34,7 @@ class MainActivity : ComponentActivity() {
         }
 
         btnFarmacias.setOnClickListener {
-            val intent = Intent(this, Farmacia::class.java)
+            val intent = Intent(this, Iniciof::class.java)
             startActivity(intent)
         }
     }
