@@ -21,12 +21,14 @@ class FarmaciaAdapter(context: Context, private val farmacias: List<Farmacia>) :
         val btnDetalles = view.findViewById<Button>(R.id.btnDetalles2)
 
         val farmacia = farmacias[position]
-        textNombre.text = farmacia.nombre
-        textTelefono.text = farmacia.telefono
+        textNombre.text = farmacia.title
+        textTelefono.text = farmacia.description
 
         btnDetalles.setOnClickListener {
             val intent = Intent(context, Detalles::class.java)
-            intent.putExtra("direccion", farmacia.direccion)
+            intent.putExtra("latitude", farmacia.latitude)
+            intent.putExtra("longitude", farmacia.longitude)
+            intent.putExtra("nombre", farmacia.title)
             context.startActivity(intent)
         }
 

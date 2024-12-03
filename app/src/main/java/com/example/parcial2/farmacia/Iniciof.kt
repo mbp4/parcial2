@@ -47,8 +47,8 @@ class Iniciof: AppCompatActivity() {
                 farmaciaAdapter.notifyDataSetChanged()
             }
             .addOnFailureListener({ exception ->
-                Toast.makeText(this, "Error al obtener los eventos de la base de datos", Toast.LENGTH_SHORT).show()
-                Log.w(TAG, "Error al obtener loes eventos de la base de datos", exception)
+                Toast.makeText(this, "Error al obtener las farmacias de la base de datos", Toast.LENGTH_SHORT).show()
+                Log.w(TAG, "Error al obtener las farmacias de la base de datos", exception)
             })
     }
 

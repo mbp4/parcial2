@@ -1,3 +1,3 @@
 package com.example.parcial2.farmacia
 
-data class Farmacia(val nombre: String, val telefono: String, val latitud: Double, val longitud: Double, val direccion: String)
+data class Farmacia(val title: String = "", val description: String = "", val latitude: Double = 0.0, val longitude: Double = 0.0, val icon: String = "", val link: String = "")
