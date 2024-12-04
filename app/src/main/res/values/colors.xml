@@ -2,6 +2,7 @@
 <resources>
     <color name="teal_pastel">#80CBC4</color>
     <color name="blue_pastel">#81D4FA</color>
+    <color name="inicio">#A1BED9</color>
     <color name="pink_pastel">#F8BBD0</color>
     <color name="yellow_pastel">#FFF59D</color>
     <color name="green_pastel">#A5D6A7</color>

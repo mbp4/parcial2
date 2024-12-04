@@ -5,6 +5,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:gravity="center"
+    android:background="@color/inicio"
     android:padding="16dp">
 
     <TextView
@@ -19,7 +20,7 @@
 
     <Button
         android:id="@+id/button1"
-        android:background="@color/lavender_pastel"
+        android:background="@color/green_pastel"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Horario" />

@@ -1,11 +1,14 @@
 package com.example.parcial2.farmacia
 
 import android.content.ContentValues.TAG
+import android.content.Intent
 import android.os.Bundle
 import android.util.Log
+import android.widget.Button
 import android.widget.ListView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import com.example.parcial2.MainActivity
 import com.example.parcial2.R
 import com.google.firebase.Firebase
 import com.google.firebase.firestore.FirebaseFirestore
@@ -16,6 +19,7 @@ class Iniciof: AppCompatActivity() {
     private lateinit var farmaciaAdapter: FarmaciaAdapter
     private var listaFarmacias: MutableList<Farmacia> = mutableListOf()
     private val db: FirebaseFirestore = Firebase.firestore
+    private lateinit var btnInicial: Button
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -24,8 +28,14 @@ class Iniciof: AppCompatActivity() {
         lista = findViewById(R.id.listView2)
         farmaciaAdapter = FarmaciaAdapter(this, listaFarmacias)
         lista.adapter = farmaciaAdapter
+        btnInicial = findViewById(R.id.btnInicial2)
 
         mostrarFarmacias()
+
+        btnInicial.setOnClickListener {
+            val intent = Intent(this, MainActivity::class.java)
+            startActivity(intent)
+        }
 
     }
 

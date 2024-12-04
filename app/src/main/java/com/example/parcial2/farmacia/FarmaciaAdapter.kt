@@ -23,7 +23,7 @@ class FarmaciaAdapter(context: Context, private val farmacias: List<Farmacia>) :
         val farmacia = farmacias[position]
         textNombre.text = farmacia.title
         val regexTelefono = """Teléfono:\s*(\d+)""".toRegex()
-        val telefono = regexTelefono.find(farmacia.description)?.groupValues?.get(1) ?: "Teléfono no disponible"
+        val telefono = regexTelefono.find(farmacia.description)?.groupValues?.get(1) ?: "No hay un telefono disponible"
         textTelefono.text = telefono
 
         btnDetalles.setOnClickListener {

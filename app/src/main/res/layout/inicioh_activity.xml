@@ -43,16 +43,24 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Ver Horario"
-        android:background="@color/lavender_pastel"
+        android:background="@color/blue_pastel"
         android:layout_marginTop="16dp" />
 
     <Button
         android:id="@+id/btnAhora"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@color/pink_pastel"
+        android:background="@color/green_pastel"
         android:text="¿Qué toca ahora?"
         android:layout_marginTop="16dp" />
+
+        <Button
+            android:id="@+id/btnInicial"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/blue_pastel"
+            android:text="Volver al inicio"
+            android:layout_marginTop="16dp" />
     </LinearLayout>
 
 </LinearLayout>

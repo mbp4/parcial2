@@ -13,6 +13,7 @@ import android.widget.ToggleButton
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.example.parcial2.MainActivity
 import com.example.parcial2.R
 import com.google.firebase.Firebase
 import com.google.firebase.firestore.FirebaseFirestore
@@ -26,6 +27,7 @@ class InicioEvento: AppCompatActivity() {
     private lateinit var btnAñadir: ImageButton
     private lateinit var btnIdioma: ToggleButton
     private val db: FirebaseFirestore = Firebase.firestore
+    private lateinit var btnInicial3: Button
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -40,6 +42,7 @@ class InicioEvento: AppCompatActivity() {
         eventoadapter = EventoAdapter(this, listado)
         listView.adapter = eventoadapter
         btnIdioma = findViewById(R.id.btnIdioma)
+        btnInicial3 = findViewById(R.id.btnInicial3)
 
         btnAñadir.setOnClickListener {
             val intent = Intent(this, AñadirEvento::class.java)
@@ -50,6 +53,10 @@ class InicioEvento: AppCompatActivity() {
             if (btnIdioma.isChecked) cambiarIdioma("es") else cambiarIdioma("en")
         }
 
+        btnInicial3.setOnClickListener{
+            val intent = Intent(this, MainActivity::class.java)
+            startActivity(intent)
+        }
         mostrarEventos()
     }
 

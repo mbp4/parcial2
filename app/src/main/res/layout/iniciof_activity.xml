@@ -26,6 +26,13 @@
     <ListView
         android:id="@+id/listView2"
         android:layout_width="match_parent"
-        android:layout_height="match_parent" />
+        android:layout_height="616dp" />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/btnInicial2"
+        android:background="@color/green_pastel"
+        android:text="Volver al inicio" />
 
 </LinearLayout>
