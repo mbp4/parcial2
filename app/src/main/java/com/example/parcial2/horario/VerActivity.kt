@@ -65,10 +65,10 @@ class VerActivity: AppCompatActivity() {
                         val hora = document.getString("horaInicio")
                         asignaturas.add("$asignatura - $hora")
                     }
-                    listAdapter.notifyDataSetChanged()
                 } else {
                     Toast.makeText(this, "No hay clases para $dia", Toast.LENGTH_SHORT).show()
                 }
+                listAdapter.notifyDataSetChanged()
             }
             .addOnFailureListener {
                 Toast.makeText(this, "Error al cargar el horario", Toast.LENGTH_SHORT).show()

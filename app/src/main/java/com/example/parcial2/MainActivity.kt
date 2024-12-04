@@ -45,6 +45,7 @@ class MainActivity : ComponentActivity() {
 
     }
 
+    //este metodo se ha utilizado junto a un boton para poner todos los datos en firebase, como solo se necesita realizar una vez lo dejamos sin uso
     private fun loadFarmaciasToFirestore() {
         FirebaseApp.initializeApp(this)
         val firestore = FirebaseFirestore.getInstance()
