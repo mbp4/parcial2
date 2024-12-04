@@ -63,3 +63,24 @@ Esta carpeta contiene toda la lógica para el tercer ejercicio, se compone de:
  -> Detalles: esta activity muestra el nombre de la farmacia que se haya escogido y un mapa que simula la ubicacion de la farmacia, ademas contiene un botón que te permite volver a la anterior actividad.
 
  -> Farmacia: es un data class para poder gestionar las farmacias.
+
+## A tener cuenta
+
+Para poder pasar el JSON a mi firebase se hizo mediante un metodo que las cargaba, para hacer esto se hizo con un botón (que luego se borro) que al pulsarlo se subierá al firebase, cuando esto se hizo, se borró el botón pero no el método para poder seguir viéndolo.
+
+## Firebase
+
+A continuación se ven unas capturas de como esta configurado mi firebase: 
+
+ ### Horario
+ <img width="1172" alt="Captura de pantalla 2024-12-04 a las 11 28 48" src="https://github.com/user-attachments/assets/c3b1b4f4-1161-4d5d-a34a-14048e74b709">
+
+ ### Eventos
+ <img width="1188" alt="Captura de pantalla 2024-12-04 a las 11 29 23" src="https://github.com/user-attachments/assets/3ee840bf-81d0-4531-b935-7bbeb566ffaf">
+
+ ### Farmacias
+ <img width="1166" alt="Captura de pantalla 2024-12-04 a las 11 29 46" src="https://github.com/user-attachments/assets/8a019d2a-0b3e-4d7a-bc71-65a49717d5cd">
+
+
+
+
