@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
@@ -8,11 +9,26 @@
         android:id="@+id/btnVolver3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:background="@color/green_pastel"
         android:text="Volver" />
 
-    <com.google.android.gms.maps.MapView
-        android:id="@+id/mapView"
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Mapa"
+        android:textColor="@color/white"
+        android:id="@+id/idMapa"
+        android:textSize="24sp" />
+
+    <ImageView
+        android:id="@+id/imageView3"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+        android:layout_height="match_parent"/>
+
+    <WebView
+        android:id="@+id/webView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:visibility="gone" />
 
 </LinearLayout>

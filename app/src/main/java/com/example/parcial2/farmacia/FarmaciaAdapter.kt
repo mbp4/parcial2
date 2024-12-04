@@ -22,13 +22,16 @@ class FarmaciaAdapter(context: Context, private val farmacias: List<Farmacia>) :
 
         val farmacia = farmacias[position]
         textNombre.text = farmacia.title
-        textTelefono.text = farmacia.description
+        val regexTelefono = """Teléfono:\s*(\d+)""".toRegex()
+        val telefono = regexTelefono.find(farmacia.description)?.groupValues?.get(1) ?: "Teléfono no disponible"
+        textTelefono.text = telefono
 
         btnDetalles.setOnClickListener {
             val intent = Intent(context, Detalles::class.java)
             intent.putExtra("latitude", farmacia.latitude)
             intent.putExtra("longitude", farmacia.longitude)
             intent.putExtra("nombre", farmacia.title)
+            intent.putExtra("link", farmacia.link)
             context.startActivity(intent)
         }
 
